@@ -1,6 +1,7 @@
 (ns jkdjka.aleph
   (:require
     [aleph.http :as http]
+    [aleph.netty :as aleph.netty]
     [mount.core :refer [defstate]]))
 
 (defn handler [req]
@@ -9,5 +10,7 @@
    :body "hello from aleph!"})
 
 (defstate aleph-server
-  :start (http/start-server handler {:port 8080})
+  :start (http/start-server handler
+                            {:port 8081
+                             :ssl-context (aleph.netty/self-signed-ssl-context)})
   :stop (.close aleph-server))
