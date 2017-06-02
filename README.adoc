@@ -1,0 +1,11 @@
+= Aleph/Yada example with SSL
+
+== Notes:
+
+2 Examples. Launch via mount after doing necessary require.
+
+[source,clojure]
+----
+(require 'jkdjka.aleph)
+(mount.core/start)
+----
