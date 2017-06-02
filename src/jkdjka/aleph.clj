@@ -10,4 +10,4 @@
 
 (defstate aleph-server
   :start (http/start-server handler {:port 8080})
-  :stop (.close x))
+  :stop (.close aleph-server))
