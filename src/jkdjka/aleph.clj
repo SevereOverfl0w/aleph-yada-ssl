@@ -9,5 +9,5 @@
    :body "hello from aleph!"})
 
 (defstate aleph-server
-  :start (def x (http/start-server handler {:port 8080}))
+  :start (http/start-server handler {:port 8080})
   :stop (.close x))
