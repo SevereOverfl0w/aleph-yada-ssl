@@ -19,3 +19,10 @@ openssl req \
      -newkey rsa:2048 -nodes -keyout domain.key \
      -x509 -days 365 -out domain.crt
 ____
+
+== Demo:
+
+https://localhost:8081
+https://localhost:8082
+https://localhost:8083
+https://localhost:8084
