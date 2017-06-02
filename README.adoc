@@ -9,3 +9,12 @@
 (require 'jkdjka.aleph)
 (mount.core/start)
 ----
+
+The SSL certs are in `resources/ssl`, and were generated according to https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs[A digital ocean community article]
+
+[source,shell]
+____
+openssl req \
+     -newkey rsa:2048 -nodes -keyout domain.key \
+     -x509 -days 365 -out domain.crt
+____
