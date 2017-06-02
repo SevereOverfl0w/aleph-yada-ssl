@@ -22,7 +22,7 @@ openssl req \
 
 == Demo:
 
-https://localhost:8081
-https://localhost:8082
-https://localhost:8083
-https://localhost:8084
+* https://localhost:8081
+* https://localhost:8082
+* https://localhost:8083
+* https://localhost:8084
