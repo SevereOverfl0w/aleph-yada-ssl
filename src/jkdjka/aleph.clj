@@ -9,8 +9,8 @@
    :headers {"content-type" "text/plain"}
    :body "hello from aleph!"})
 
-(defstate aleph-server
+(defstate self-signed-server
   :start (http/start-server handler
                             {:port 8081
                              :ssl-context (aleph.netty/self-signed-ssl-context)})
-  :stop (.close aleph-server))
+  :stop (.close self-signed-server))
